@@ -57,6 +57,9 @@ type cache struct {
 }
 
 func (c *cache) reset() {
+  for i := range c.vs {
+    c.vs[i] = Value{}
+  }
 	c.vs = c.vs[:0]
 }
 
